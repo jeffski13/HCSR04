@@ -1,0 +1,20 @@
+Lib installation instructions:
+
+Open Arduino IDE (from arduino.cc)
+Sketch > Include Library > Add .ZIP Library
+Find location of HCSR04.zip
+
+File > Examples > HCSR04 (all the way at the bottom) > DistanceSensor_Example
+Compile (Check box in upper left corner of IDE OR ctrl + R)
+
+___________________________________________
+CODE:
+
+
+#include<DistanceSensor.h>
+
+//instantiate with trig pin, echo pin
+DistanceSensor sens(10, 11);
+
+//get distance (true = cm, false = inches)
+long cm = sensor.getDistance(true);
